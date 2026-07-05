@@ -1,0 +1,339 @@
+/* ==========================================
+   1. СБРОС СТИЛЕЙ И ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
+   ========================================== */
+:root {
+    --bg-color: #0b0b0f;       /* Глубокий темный фон */
+    --card-bg: #16161f;        /* Цвет карточек (чуть светлее фона) */
+    --text-main: #f4f4f5;      /* Основной белый текст */
+    --text-muted: #a1a1aa;     /* Серый приглушенный текст */
+    --accent: #6366f1;         /* Основной акцентный цвет (индиго/фиолетовый) */
+    --accent-hover: #4f46e5;   /* Акцентный цвет при наведении */
+    --border-color: #27273a;   /* Цвет тонких границ */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный скролл по якорным ссылкам */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ограничивающий контейнер для контента */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================
+   2. ШАПКА И НАВИГАЦИЯ
+   ========================================== */
+.navbar {
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(11, 11, 15, 0.8);
+    backdrop-filter: blur(12px); /* Эффект размытия заднего фона */
+    z-index: 100;
+    border-bottom: 1px solid rgba(39, 39, 58, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-main);
+}
+
+/* ==========================================
+   3. HERO SECTION (ГЛАВНЫЙ ЭКРАН)
+   ========================================== */
+.hero-section {
+    padding: 100px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-name {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.hero-tagline {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+
+.hero-intro {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+/* Стильная минималистичная кнопка */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ==========================================
+   4. ОБЩИЕ СТИЛИ ДЛЯ СЕКЦИЙ
+   ========================================== */
+.section {
+    padding: 80px 0 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+}
+
+/* Стили блока About Me */
+.about-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    max-width: 750px;
+}
+
+.about-content strong {
+    color: var(--text-main);
+}
+
+/* ==========================================
+   5. КАРТОЧКИ И ПРОЕКТЫ (GRID)
+   ========================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки на ПК */
+    gap: 24px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 241, 0.4);
+}
+
+/* Бейджики (теги статуса на карточках) */
+.badge {
+    align-self: flex-start;
+    background-color: rgba(99, 102, 241, 0.15);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.badge-alt {
+    background-color: rgba(161, 161, 170, 0.1);
+    color: var(--text-muted);
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.project-stat {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.project-description {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+    flex-grow: 1; /* Чтобы теги прижимались к низу карточки */
+}
+
+/* Список технологий / навыков внутри кейса */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.project-tags li {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #d4d4d8;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Анимация загрузки для будущего проекта */
+.placeholder {
+    background-color: transparent;
+    border: 1px dashed var(--border-color);
+}
+
+.placeholder:hover {
+    border-color: var(--text-muted);
+}
+
+.loading-bar {
+    height: 3px;
+    width: 40px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-color: var(--text-muted);
+    animation: loading 1.5s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% { left: -50%; }
+    100% { left: 100%; }
+}
+
+/* ==========================================
+   6. КОНТАКТЫ И ПОДВАЛ
+   ========================================== */
+.contact-section {
+    text-align: left;
+}
+
+.contact-text {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    font-size: 16px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.contact-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-main);
+}
+
+.footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid rgba(39, 39, 58, 0.3);
+    color: #52525b;
+    font-size: 13px;
+}
+
+/* ==========================================
+   7. АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 40px; /* Уменьшаем шрифт заголовка на мобилках */
+    }
+    
+    .hero-section {
+        padding: 60px 0 40px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Перестраиваем карточки в одну колонку */
+    }
+    
+    .section {
+        padding: 50px 0 30px 0;
+    }
+} 
