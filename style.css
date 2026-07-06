@@ -337,3 +337,54 @@ body {
         padding: 50px 0 30px 0;
     }
 } 
+/* Кнопка реакций */
+#reaction-btn {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.1s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    user-select: none; /* чтобы текст не выделялся синим при быстрых кликах */
+}
+
+/* Эффекты при наведении и нажатии */
+#reaction-btn:hover {
+    transform: scale(1.05);
+    border-color: #555;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+#reaction-btn:active {
+    transform: scale(0.95);
+}
+
+/* Стили для вылетающих эмодзи */
+.floating-emoji {
+    position: fixed;
+    pointer-events: none;
+    font-size: 28px;
+    z-index: 9999;
+    animation: emojiExplode 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Анимация взрыва: летит вверх, косит вбок и плавно исчезает */
+@keyframes emojiExplode {
+    0% {
+        transform: translate(-50%, -50%) translateY(0) scale(0.3);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-120px) translateX(var(--drift)) scale(1.5) rotate(15deg);
+        opacity: 0;
+    }
+}
