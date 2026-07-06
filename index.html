@@ -51,61 +51,67 @@
         </section>
 
         <!-- БЛОК 3: EXPERIENCE & PROJECTS (Кейсы и проекты) -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Experience & Projects</h2>
-            <div class="projects-grid">
-        <div class="projects-grid">
-        <!-- Карточка главного кейса (YouTube) -->
-        <div class="project-card featured">
-            <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <!-- Задали точное имя youtube.png.jpg и зафиксировали размер -->
-                <img src="youtube.png.jpg" alt="YouTube" style="height: 32px; width: auto; object-fit: contain; border-radius: 6px;">
-                <span class="badge">Main Case</span>
+       <!-- БЛОК 3: EXPERIENCE & PROJECTS (Кейсы и проекты) -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Experience & Projects</h2>
+        
+        <!-- align-items: start не даст карточкам дико вытягиваться вниз -->
+        <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start; margin-bottom: 50px;">
+            
+            <!-- Карточка 1: YouTube -->
+            <div class="project-card featured">
+                <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <!-- Увеличили логотип до 48px и проверили расширение -->
+                    <img src="youtube.png.jpg" alt="YouTube" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
+                    <span class="badge">Main Case</span>
+                </div>
+                <h3>YouTube Channel "Seme4ny"</h3>
+                <p class="project-stat">30,000+ Subscribers</p>
+                <p class="project-description">
+                    Concepted, produced, and independently scaled a digital brand. Reached over 30k subscribers by analyzing trends and understanding audience preferences.
+                </p>
+                <ul class="project-tags">
+                    <li>Video Production</li>
+                    <li>SEO Optimization</li>
+                    <li>Retention Analytics</li>
+                    <li>Community Management</li>
+                </ul>
             </div>
-            <h3>YouTube Channel "Seme4ny"</h3>
-            <p class="project-stat">30,000+ Subscribers</p>
-            <p class="project-description">
-                Concepted, produced, and independently scaled a digital brand. Reached over 30k subscribers by analyzing trends and understanding audience preferences.
-            </p>
-            <ul class="project-tags">
-                <li>Video Production</li>
-                <li>SEO Optimization</li>
-                <li>Retention Analytics</li>
-                <li>Community Management</li>
-            </ul>
-        </div>
 
-        <!-- Карточка 2: Монтаж в CapCut -->
-        <div class="project-card">
-            <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <!-- Зафиксировали размер для лого Капкута -->
-                <img src="capcut.png" alt="CapCut" style="height: 32px; width: auto; object-fit: contain; border-radius: 6px;">
-                <span class="badge badge-alt">Skills</span>
+            <!-- Карточка 2: CapCut -->
+            <div class="project-card">
+                <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <!-- Увеличили логотип до 48px -->
+                    <img src="capcut.png" alt="CapCut" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
+                    <span class="badge badge-alt">Skills</span>
+                </div>
+                <h3>Short-Form Video Production</h3>
+                <p class="project-stat">CapCut Specialist</p>
+                <p class="project-description">
+                    Advanced experience in editing engaging short-form content (YouTube Shorts, cinematic edits). Specialized in dynamic pacing, visual effects, and audio synchronization to maximize viewer retention.
+                </p>
+                <ul class="project-tags">
+                    <li>CapCut PC / Mobile</li>
+                    <li>Dynamic Pacing</li>
+                    <li>Visual Effects</li>
+                    <li>Sound Design</li>
+                </ul>
             </div>
-            <h3>Short-Form Video Production</h3>
-            <p class="project-stat">CapCut Specialist</p>
-            <p class="project-description">
-                Advanced experience in editing engaging short-form content (YouTube Shorts, cinematic edits). Specialized in dynamic pacing, visual effects, and audio synchronization to maximize viewer retention.
-            </p>
-            <ul class="project-tags">
-                <li>CapCut PC / Mobile</li>
-                <li>Dynamic Pacing</li>
-                <li>Visual Effects</li>
-                <li>Sound Design</li>
-            </ul>
-        </div>
 
-        <!-- Карточка-заглушка для будущего проекта -->
-        <div class="project-card placeholder">
-            <span class="badge badge-alt">In Progress</span>
-            <h3>Future AI Project</h3>
-            <p class="project-description">
-                An upcoming concept focusing on AI-driven automation and productivity.
-            </p>
-            <div class="loading-bar"></div>
-        </div>
-    </div>
+            <!-- Карточка 3: Future AI Project -->
+            <div class="project-card placeholder">
+                <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <span class="badge badge-alt" style="margin-left: auto;">In Progress</span>
+                </div>
+                <h3>Future AI Project</h3>
+                <p class="project-description">
+                    An upcoming concept focusing on AI-driven automation and productivity.
+                </p>
+                <div class="loading-bar"></div>
+            </div>
 
+        </div> <!-- ВСЕ КАРТОЧКИ ЗАКРЫЛИСЬ ТУТ -->
+    </section> <!-- СЕКЦИЯ ПРОЕКТОВ ЗАКРЫЛАСЬ ТУТ -->
         <!-- БЛОК 4: CONTACTS (Контакты) -->
         <section id="contacts"="section contact-section">
             <h2 class="section-title">Let's Connect</h2>
