@@ -53,98 +53,92 @@
         <!-- БЛОК 3: EXPERIENCE & PROJECTS (Кейсы и проекты) -->
        <!-- БЛОК 3: EXPERIENCE & PROJECTS (Кейсы и проекты) -->
     <section id="projects" class="section">
-        <h2 class="section-title">Experience & Projects</h2>
+    <h2 class="section-title">Experience & Projects</h2>
+    
+    <!-- Сетка для 4 карточек -->
+    <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start; margin-bottom: 50px;">
         
-        <!-- align-items: start не даст карточкам дико вытягиваться вниз -->
-        <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: start; margin-bottom: 50px;">
-            
-            <!-- Карточка 1: YouTube -->
-            <div class="project-card featured">
-                <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                    <!-- Увеличили логотип до 48px и проверили расширение -->
-                    <img src="youtube.png.jpg" alt="YouTube" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
-                    <span class="badge">Main Case</span>
-                </div>
-                <h3>YouTube Channel "Seme4ny"</h3>
-                <p class="project-stat">30,000+ Subscribers</p>
-                <p class="project-description">
-                    Concepted, produced, and independently scaled a digital brand. Reached over 30k subscribers by analyzing trends and understanding audience preferences.
-                </p>
-                <ul class="project-tags">
-                    <li>Video Production</li>
-                    <li>SEO Optimization</li>
-                    <li>Retention Analytics</li>
-                    <li>Community Management</li>
-                </ul>
+        <!-- Карточка 1: YouTube -->
+        <div class="project-card featured">
+            <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <img src="youtube.png.jpg" alt="YouTube" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
+                <span class="badge">Main Case</span>
             </div>
+            <h3>YouTube Channel "Seme4ny"</h3>
+            <p class="project-stat">30,000+ Subscribers</p>
+            <p class="project-description">
+                Concepted, produced, and independently scaled a digital brand. Reached over 30k subscribers by analyzing trends and understanding audience preferences.
+            </p>
+            <ul class="project-tags">
+                <li>Video Production</li>
+                <li>SEO Optimization</li>
+                <li>Retention Analytics</li>
+                <li>Community Management</li>
+            </ul>
+        </div>
 
-            <!-- Карточка 2: CapCut -->
-            <div class="project-card">
-                <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                    <!-- Увеличили логотип до 48px -->
-                    <img src="capcut.png" alt="CapCut" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
-                    <span class="badge badge-alt">Skills</span>
-                </div>
-                <h3>Short-Form Video Production</h3>
-                <p class="project-stat">CapCut Specialist</p>
-                <p class="project-description">
-                    Advanced experience in editing engaging short-form content (YouTube Shorts, cinematic edits). Specialized in dynamic pacing, visual effects, and audio synchronization to maximize viewer retention.
-                </p>
-                <ul class="project-tags">
-                    <li>CapCut PC / Mobile</li>
-                    <li>Dynamic Pacing</li>
-                    <li>Visual Effects</li>
-                    <li>Sound Design</li>
-                </ul>
+        <!-- Карточка 2: CapCut -->
+        <div class="project-card">
+            <div class="project-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <img src="capcut.png" alt="CapCut" style="height: 48px; width: auto; object-fit: contain; border-radius: 8px;">
+                <span class="badge badge-alt">Skills</span>
             </div>
-            <!-- AI BOT PROJECT CARD -->
-<div class="project-card">
-    <div class="project-content">
-        <!-- Clickable Title -->
-        <h3><a href="https://t.me/VorsterAIBot" target="_blank" style="text-decoration: none; color: inherit;">AI Content Producer (Telegram Bot) 🚀</a></h3>
-        
-        <p class="project-description">
-            Developed and deployed an intelligent Telegram bot powered by the GPT-4o-mini LLM (integrated via GitHub Models API). 
-            The bot functions as a personal AI producer for content creators: it generates viral video ideas, 
-            writes high-retention script structures (first 3-second hooks), and suggests pacing strategies along with tailored CapCut effects.
-        </p>
-        
-        <div class="project-tags">
-            <span>Python</span>
-            <span>Aiogram 3</span>
-            <span>GPT-4o-mini API</span>
-            <span>Cloud Hosting</span>
+            <h3>Short-Form Video Production</h3>
+            <p class="project-stat">CapCut Specialist</p>
+            <p class="project-description">
+                Advanced experience in editing engaging short-form content (YouTube Shorts, cinematic edits). Specialized in dynamic pacing, visual effects, and audio synchronization to maximize viewer retention.
+            </p>
+            <ul class="project-tags">
+                <li>CapCut PC / Mobile</li>
+                <li>Dynamic Pacing</li>
+                <li>Visual Effects</li>
+                <li>Sound Design</li>
+            </ul>
         </div>
-        
-        <!-- Try Bot Button -->
-        <a href="https://t.me/VorsterAIBot" target="_blank" class="project-link-btn">Try Bot →</a>
-    
-          <!-- GLOBAL-READY PROJECT CARD -->
-<div class="project-card">
-    <div class="project-content">
-        <h3>Global-Ready (AI E-commerce Localizer) 🛍️</h3>
-        
-        <p class="project-description">
-            Developed and deployed a web application that automatically adapts Western product descriptions 
-            for major Chinese marketplaces (Taobao, JD, Douyin). Integrates GPT-4o-mini via GitHub Models API 
-            to generate culturally optimized sales hooks and platform-specific SEO keywords.
-        </p>
-        
-        <div class="project-tags">
-            <span>Python</span>
-            <span>Streamlit</span>
-            <span>GPT-4o-mini API</span>
-            <span>Render Hosting</span>
+
+        <!-- Карточка 3: Telegram Bot -->
+        <div class="project-card">
+            <div class="project-content">
+                <h3><a href="https://t.me/VorsterAIBot" target="_blank" style="text-decoration: none; color: inherit;">AI Content Producer (Telegram Bot) 🚀</a></h3>
+                <p class="project-description">
+                    Developed and deployed an intelligent Telegram bot powered by the GPT-4o-mini LLM (integrated via GitHub Models API). 
+                    The bot functions as a personal AI producer for content creators: it generates viral video ideas, 
+                    writes high-retention script structures (first 3-second hooks), and suggests pacing strategies along with tailored CapCut effects.
+                </p>
+                <div class="project-tags" style="margin-bottom: 15px;">
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">Python</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">Aiogram 3</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">GPT-4o-mini API</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem;">Cloud Hosting</span>
+                </div>
+                <a href="https://t.me/VorsterAIBot" target="_blank" class="project-link-btn">Try Bot →</a>
+            </div>
         </div>
-        
-        <!-- Ссылки -->
-        <div style="margin-top: 15px;">
-            <a href="https://global-ready.onrender.com" target="_blank" class="project-link-btn" style="margin-right: 10px;">Open Web App →</a>
-            <a href="Global-Ready-Case-Study.pdf" target="_blank" class="project-link-btn" style="background: #444;">Case Study (PDF) →</a>
+
+        <!-- Карточка 4: Global-Ready -->
+        <div class="project-card">
+            <div class="project-content">
+                <h3>Global-Ready (AI E-commerce Localizer) 🛍️</h3>
+                <p class="project-description">
+                    Developed and deployed a web application that automatically adapts Western product descriptions 
+                    for major Chinese marketplaces (Taobao, JD, Douyin). Integrates GPT-4o-mini via GitHub Models API 
+                    to generate culturally optimized sales hooks and platform-specific SEO keywords.
+                </p>
+                <div class="project-tags" style="margin-bottom: 15px;">
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">Python</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">Streamlit</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; margin-right: 5px; font-size: 0.85rem;">GPT-4o-mini API</span>
+                    <span style="background: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem;">Render Hosting</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <a href="https://global-ready.onrender.com" target="_blank" class="project-link-btn" style="margin-right: 10px;">Open Web App →</a>
+                    <a href="Global-Ready-Case-Study.pdf" target="_blank" class="project-link-btn" style="background: #444;">Case Study (PDF) →</a>
+                </div>
+            </div>
         </div>
-    
-        </div> <!-- ВСЕ КАРТОЧКИ ЗАКРЫЛИСЬ ТУТ -->
-    </section> <!-- СЕКЦИЯ ПРОЕКТОВ ЗАКРЫЛАСЬ ТУТ -->
+
+    </div> <!-- Закрыли projects-grid -->
+</section> <!-- Закрыли section -->
     <!-- БЛОК РЕАКЦИЙ -->
     <div class="reaction-section" style="text-align: center; margin: 60px 0 20px 0;">
         <p style="color: #666; font-size: 0.9rem; margin-bottom: 12px; font-family: sans-serif;">Show some love! Drop a reaction</p>
